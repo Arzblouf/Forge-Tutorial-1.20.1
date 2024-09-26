@@ -1,6 +1,11 @@
 package net.joshua.essaiemod;
 
 import com.mojang.logging.LogUtils;
+import net.joshua.essaiemod.entity.ModEntitites;
+import net.joshua.essaiemod.item.ModCreativeModTabs;
+import net.joshua.essaiemod.item.ModItems;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -23,10 +28,14 @@ public class TutorialMod {
     public TutorialMod() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        ModCreativeModTabs.register(modEventBus);
+
+        ModItems.register(modEventBus);
+        ModEntitites.register(modEventBus);
+
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
-
         modEventBus.addListener(this::addCreative);
 
     }
@@ -37,7 +46,10 @@ public class TutorialMod {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
+            event.accept(ModItems.ADANIUMORE);
+            event.accept(ModItems.OUI);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
