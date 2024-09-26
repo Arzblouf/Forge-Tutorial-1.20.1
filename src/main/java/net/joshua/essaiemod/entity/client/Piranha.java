@@ -23,24 +23,24 @@ public class Piranha<T extends Entity> extends HierarchicalModel<T> {
 		PartDefinition Piranha = partdefinition.addOrReplaceChild("Piranha", CubeListBuilder.create(), PartPose.offset(0.0F, 24.0F, 0.0F));
 
 		PartDefinition Corps = Piranha.addOrReplaceChild("Corps", CubeListBuilder.create().texOffs(0, 0).addBox(-2.0F, -12.0F, -1.0F, 4.0F, 4.0F, 8.0F, new CubeDeformation(0.0F))
-		.texOffs(0, 1).addBox(0.0F, -14.0F, 2.0F, 0.0F, 2.0F, 3.0F, new CubeDeformation(0.0F))
-		.texOffs(0, 11).addBox(0.0F, -8.0F, 4.0F, 0.0F, 1.0F, 3.0F, new CubeDeformation(0.0F))
-		.texOffs(0, 11).addBox(0.0F, -13.0F, 6.0F, 0.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 0.0F, 0.0F));
+				.texOffs(0, 1).addBox(0.0F, -14.0F, 2.0F, 0.0F, 2.0F, 3.0F, new CubeDeformation(0.0F))
+				.texOffs(0, 11).addBox(0.0F, -8.0F, 4.0F, 0.0F, 1.0F, 3.0F, new CubeDeformation(0.0F))
+				.texOffs(0, 11).addBox(0.0F, -13.0F, 6.0F, 0.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 0.0F, 0.0F));
 
 		PartDefinition Machoire = Piranha.addOrReplaceChild("Machoire", CubeListBuilder.create().texOffs(0, 6).addBox(-2.0F, -1.25F, -0.375F, 4.0F, 2.0F, 0.0F, new CubeDeformation(0.0F))
-		.texOffs(15, 11).addBox(2.0F, -1.25F, -0.375F, 0.0F, 2.0F, 1.0F, new CubeDeformation(0.0F))
-		.texOffs(11, 15).addBox(-2.0F, -1.25F, -0.375F, 0.0F, 2.0F, 1.0F, new CubeDeformation(0.0F))
-		.texOffs(1, 13).addBox(-2.0F, 0.75F, -0.375F, 4.0F, 0.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, -8.75F, -1.125F));
+				.texOffs(15, 11).addBox(2.0F, -1.25F, -0.375F, 0.0F, 2.0F, 1.0F, new CubeDeformation(0.0F))
+				.texOffs(11, 15).addBox(-2.0F, -1.25F, -0.375F, 0.0F, 2.0F, 1.0F, new CubeDeformation(0.0F))
+				.texOffs(1, 13).addBox(-2.0F, 0.75F, -0.375F, 4.0F, 0.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, -8.75F, -1.125F));
 
 		PartDefinition Queue = Piranha.addOrReplaceChild("Queue", CubeListBuilder.create(), PartPose.offset(0.0F, -10.0F, 10.6667F));
 
 		PartDefinition bone = Queue.addOrReplaceChild("bone", CubeListBuilder.create().texOffs(0, 0).addBox(-1.0F, -1.0F, 0.0F, 2.0F, 2.0F, 2.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 0.0F, -3.6667F));
 
 		PartDefinition bone2 = Queue.addOrReplaceChild("bone2", CubeListBuilder.create().texOffs(10, 10).addBox(0.2597F, -2.0F, -0.1716F, 0.0F, 4.0F, 2.0F, new CubeDeformation(0.0F))
-		.texOffs(6, 4).addBox(0.2597F, -3.0F, 1.8284F, 0.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
-		.texOffs(6, 3).addBox(0.2597F, -2.0F, 1.8284F, 0.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
-		.texOffs(6, 0).addBox(0.2597F, 2.0F, 1.8284F, 0.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
-		.texOffs(0, 0).addBox(0.2597F, 1.0F, 1.8284F, 0.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(-0.2597F, 0.0F, -1.4951F));
+				.texOffs(6, 4).addBox(0.2597F, -3.0F, 1.8284F, 0.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
+				.texOffs(6, 3).addBox(0.2597F, -2.0F, 1.8284F, 0.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
+				.texOffs(6, 0).addBox(0.2597F, 2.0F, 1.8284F, 0.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
+				.texOffs(0, 0).addBox(0.2597F, 1.0F, 1.8284F, 0.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(-0.2597F, 0.0F, -1.4951F));
 
 		PartDefinition NageoireGauche = Piranha.addOrReplaceChild("NageoireGauche", CubeListBuilder.create(), PartPose.offset(2.113F, -8.4831F, 1.1268F));
 
